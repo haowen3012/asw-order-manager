@@ -18,7 +18,23 @@ spring:
         # consul deve restituire solo servizi che passano l'health check (default=false) 
         queryPassing: true 
     loadbalancer: 
-      ribbon.enabled: false 
+      ribbon.enabled: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/orderservice
+    password: postgres
+    jpa:
+      open-in-view: 'false'
+      generate-ddl: 'true'
+      properties:
+        hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: 'true'
+      hibernate:
+        ddl-auto: create-drop
+      show-sql: 'false'
 
 server: 
   port: ${PORT:${SERVER_PORT:0}}
