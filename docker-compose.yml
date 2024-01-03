@@ -11,3 +11,14 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+
+  products:
+    image: docker.io/postgres:latest
+    volumes:
+      - "$PWD/products:/docker-entrypoint-initdb.d"
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres

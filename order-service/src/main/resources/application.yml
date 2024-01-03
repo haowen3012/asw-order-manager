@@ -19,22 +19,24 @@ spring:
         queryPassing: true 
     loadbalancer: 
       ribbon.enabled: false
+  # POSTGRES
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: postgres
     url: jdbc:postgresql://localhost:5432/orderservice
+    username: postgres
     password: postgres
-    jpa:
-      open-in-view: 'false'
-      generate-ddl: 'true'
-      properties:
-        hibernate:
-          jdbc:
-            lob:
-              non_contextual_creation: 'true'
+  # JPA
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    properties:
       hibernate:
-        ddl-auto: create-drop
-      show-sql: 'false'
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
 
 server: 
   port: ${PORT:${SERVER_PORT:0}}

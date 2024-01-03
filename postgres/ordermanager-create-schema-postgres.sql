@@ -1,2 +1,2 @@
 create database orderservice;
--- GRANT ALL PRIVILEGES ON DATABASE restaurantservice TO 'postgres'@'%' WITH GRANT OPTION;
+-- GRANT ALL PRIVILEGES ON DATABASE orderservice TO 'postgres'@'%' WITH GRANT OPTION;
