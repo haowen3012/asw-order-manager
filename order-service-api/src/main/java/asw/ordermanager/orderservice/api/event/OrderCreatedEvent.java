@@ -1,9 +1,6 @@
 package asw.ordermanager.orderservice.api.event;
-
 import java.util.*;
-
-
-import asw.ordermanager.common.api.event.DomainEvent;
+import asw.common.api.event.DomainEvent;
 import asw.ordermanager.orderservice.api.rest.OrderItemElement;
 import lombok.*;
 
