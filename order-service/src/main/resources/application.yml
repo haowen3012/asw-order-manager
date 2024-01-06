@@ -66,3 +66,4 @@ server:
 #spring.jpa.show-sql: true
 # disable OSIV
 spring.jpa.open-in-view: false
+

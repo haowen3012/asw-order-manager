@@ -8,11 +8,7 @@ spring:
     consul:
       host: localhost
       port: 8500
-<<<<<<< Updated upstream
-      discovery:
-=======
       discovery: 
->>>>>>> Stashed changes
         instanceId: ${spring.application.name}-host.docker.internal-${random.value}
         healthCheckPath: /actuator/health
         healthCheckInterval: 10s
