@@ -8,7 +8,11 @@ spring:
     consul:
       host: localhost
       port: 8500
+<<<<<<< Updated upstream
       discovery:
+=======
+      discovery: 
+>>>>>>> Stashed changes
         instanceId: ${spring.application.name}-host.docker.internal-${random.value}
         healthCheckPath: /actuator/health
         healthCheckInterval: 10s
@@ -38,6 +42,22 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: false
+  # KAFKA
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    bootstrap-servers: host.docker.internal:9092
 
 
       

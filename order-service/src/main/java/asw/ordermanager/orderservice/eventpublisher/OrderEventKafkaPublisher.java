@@ -3,10 +3,15 @@ package asw.ordermanager.orderservice.eventpublisher;
 import asw.ordermanager.common.api.event.DomainEvent;
 import asw.ordermanager.orderservice.api.event.OrderServiceEventChannel;
 import asw.ordermanager.orderservice.domain.OrderEventPublisher;
+<<<<<<< Updated upstream
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+>>>>>>> Stashed changes
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
